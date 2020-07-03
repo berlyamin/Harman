@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harman.Common", "Harman.Common\Harman.Common.csproj", "{4CA861E4-A18A-4A7D-8E41-8F8A663FDE6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Harman.Common", "Harman.Common\Harman.Common.csproj", "{4CA861E4-A18A-4A7D-8E41-8F8A663FDE6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harman.Web", "Harman.Web\Harman.Web.csproj", "{C88BEF8B-86E5-4AF8-9BC2-6772EE179B51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harman.Web", "Harman.Web\Harman.Web.csproj", "{BAB2D72F-FFA5-450C-98A9-654FDE95F5FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{4CA861E4-A18A-4A7D-8E41-8F8A663FDE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CA861E4-A18A-4A7D-8E41-8F8A663FDE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CA861E4-A18A-4A7D-8E41-8F8A663FDE6F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C88BEF8B-86E5-4AF8-9BC2-6772EE179B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C88BEF8B-86E5-4AF8-9BC2-6772EE179B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C88BEF8B-86E5-4AF8-9BC2-6772EE179B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C88BEF8B-86E5-4AF8-9BC2-6772EE179B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB2D72F-FFA5-450C-98A9-654FDE95F5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB2D72F-FFA5-450C-98A9-654FDE95F5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB2D72F-FFA5-450C-98A9-654FDE95F5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB2D72F-FFA5-450C-98A9-654FDE95F5FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

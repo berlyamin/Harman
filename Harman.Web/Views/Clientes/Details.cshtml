@@ -1,0 +1,60 @@
+﻿@model Harman.Web.Data.Entities.Cliente
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customerlastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customerlastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customeridentification)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customeridentification)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerCellPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerCellPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomerAddress)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Customerid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
