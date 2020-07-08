@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleModel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleEntryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticlePrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleMinimumAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleRemarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleClassificationID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ubicacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleEntryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticlePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleMinimumAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleRemarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleClassificationID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca.NombreMarca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unidad.NombreUnidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion.NombreUbicacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProductoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProductoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProductoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

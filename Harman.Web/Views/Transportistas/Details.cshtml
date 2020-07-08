@@ -1,0 +1,78 @@
+﻿@model Harman.Web.Data.Entities.Transportista
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transportista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierAccount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierAccount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierContactName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierContactName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierCellPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierCellPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CourierRemarks)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CourierRemarks)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.CityName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CourierID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

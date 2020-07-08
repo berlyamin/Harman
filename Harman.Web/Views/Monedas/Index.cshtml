@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Moneda>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoMoneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreMoneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SimboloDeMoneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoMoneda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreMoneda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SimboloDeMoneda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MonedaID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MonedaID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MonedaID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

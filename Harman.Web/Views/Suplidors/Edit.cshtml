@@ -1,0 +1,94 @@
+﻿@model Harman.Web.Data.Entities.Suplidor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Suplidor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SupplidorID" />
+            <div class="form-group">
+                <label asp-for="SupplierCode" class="control-label"></label>
+                <input asp-for="SupplierCode" class="form-control" />
+                <span asp-validation-for="SupplierCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierFirstName" class="control-label"></label>
+                <input asp-for="SupplierFirstName" class="form-control" />
+                <span asp-validation-for="SupplierFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierLastName" class="control-label"></label>
+                <input asp-for="SupplierLastName" class="form-control" />
+                <span asp-validation-for="SupplierLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierDocumentNumber" class="control-label"></label>
+                <input asp-for="SupplierDocumentNumber" class="form-control" />
+                <span asp-validation-for="SupplierDocumentNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierPhone" class="control-label"></label>
+                <input asp-for="SupplierPhone" class="form-control" />
+                <span asp-validation-for="SupplierPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierCellPhone" class="control-label"></label>
+                <input asp-for="SupplierCellPhone" class="form-control" />
+                <span asp-validation-for="SupplierCellPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierStartDate" class="control-label"></label>
+                <input asp-for="SupplierStartDate" class="form-control" />
+                <span asp-validation-for="SupplierStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierAddress" class="control-label"></label>
+                <textarea asp-for="SupplierAddress" class="form-control"></textarea>
+                <span asp-validation-for="SupplierAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierEmail" class="control-label"></label>
+                <input asp-for="SupplierEmail" class="form-control" />
+                <span asp-validation-for="SupplierEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierRemarks" class="control-label"></label>
+                <textarea asp-for="SupplierRemarks" class="form-control"></textarea>
+                <span asp-validation-for="SupplierRemarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClasificacionSuplidorID" class="control-label"></label>
+                <select asp-for="ClasificacionSuplidorID" class="form-control" asp-items="ViewBag.ClasificacionSuplidorID"></select>
+                <span asp-validation-for="ClasificacionSuplidorID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoDocumentoID" class="control-label"></label>
+                <select asp-for="TipoDocumentoID" class="form-control" asp-items="ViewBag.TipoDocumentoID"></select>
+                <span asp-validation-for="TipoDocumentoID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CiudadID" class="control-label"></label>
+                <select asp-for="CiudadID" class="form-control" asp-items="ViewBag.CiudadID"></select>
+                <span asp-validation-for="CiudadID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

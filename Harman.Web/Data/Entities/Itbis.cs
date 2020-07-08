@@ -20,6 +20,7 @@ namespace Harman.Web.Data.Entities
         [Required(ErrorMessage = "El campo {0} es Requerido")]
         public string DescripcionItbis { get; set; }
 
-        public virtual ICollection<Cliente> Clientes { get; set; }
+        public virtual ICollection<Cliente> Clientes { get; set; } 
+        public virtual ICollection<Factura> Facturas { get; set; }
     }
 }

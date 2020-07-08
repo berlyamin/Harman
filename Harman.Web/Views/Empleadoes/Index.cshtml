@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Empleado>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeDateAdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeIDNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeCellPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePhoneExtension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compañia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeDateAdd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDocumento.DescripcionTipoDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeIDNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeCellPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeePhoneExtension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado.StatusCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo.NombreCargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendedor.DescripcionVendedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Compañia.CompanyEmail)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpleadoID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmpleadoID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpleadoID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

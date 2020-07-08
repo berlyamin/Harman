@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Suplidor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierDocumentNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierCellPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierRemarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClasificacionSuplidor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierDocumentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierCellPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierRemarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClasificacionSuplidor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDocumento.DescripcionTipoDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad.CityName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SupplidorID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SupplidorID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SupplidorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

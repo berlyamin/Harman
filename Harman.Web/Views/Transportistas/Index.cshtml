@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Transportista>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierContactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierCellPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourierRemarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierAccount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierContactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierCellPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourierRemarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad.CityName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CourierID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CourierID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CourierID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

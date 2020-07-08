@@ -1,0 +1,102 @@
+﻿@model Harman.Web.Data.Entities.Empleado
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeDateAdd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeDateAdd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoDocumento.DescripcionTipoDocumento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeIDNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeIDNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeePhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeePhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeCellPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeCellPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeePhoneExtension)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeePhoneExtension)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado.StatusCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cargo.NombreCargo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendedor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendedor.DescripcionVendedor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Compañia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Compañia.CompanyEmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EmpleadoID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

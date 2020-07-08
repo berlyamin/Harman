@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Vendedor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoVendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescripcionVendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerCommissionPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerDiscountValue)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoVendedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionVendedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerCommissionPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerDiscountValue)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VendedorID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VendedorID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VendedorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

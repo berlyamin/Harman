@@ -1,0 +1,59 @@
+﻿@model Harman.Web.Data.Entities.Venta
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Venta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FechaDeVenta" class="control-label"></label>
+                <input asp-for="FechaDeVenta" class="form-control" />
+                <span asp-validation-for="FechaDeVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoDeVenta" class="control-label"></label>
+                <select asp-for="EstadoDeVenta" class="form-control"></select>
+                <span asp-validation-for="EstadoDeVenta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClienteID" class="control-label"></label>
+                <select asp-for="ClienteID" class ="form-control" asp-items="ViewBag.ClienteID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendedorID" class="control-label"></label>
+                <select asp-for="VendedorID" class ="form-control" asp-items="ViewBag.VendedorID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModoDePagoID" class="control-label"></label>
+                <select asp-for="ModoDePagoID" class ="form-control" asp-items="ViewBag.ModoDePagoID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoDeTransaccionID" class="control-label"></label>
+                <select asp-for="TipoDeTransaccionID" class ="form-control" asp-items="ViewBag.TipoDeTransaccionID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NcfId" class="control-label"></label>
+                <input asp-for="NcfId" class="form-control" />
+                <span asp-validation-for="NcfId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

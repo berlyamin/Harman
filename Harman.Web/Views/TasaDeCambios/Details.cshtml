@@ -1,0 +1,36 @@
+﻿@model Harman.Web.Data.Entities.TasaDeCambio
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TasaDeCambio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacionTasaDeCambio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacionTasaDeCambio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ExchangeValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ExchangeValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Moneda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Moneda.CodigoMoneda)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TasaDeCambioID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.Ciudad>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CityCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pais.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CiudadID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CiudadID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CiudadID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿@model Harman.Web.Data.Entities.Transportista
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Transportista</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CourierCode" class="control-label"></label>
+                <input asp-for="CourierCode" class="form-control" />
+                <span asp-validation-for="CourierCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierName" class="control-label"></label>
+                <input asp-for="CourierName" class="form-control" />
+                <span asp-validation-for="CourierName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierAccount" class="control-label"></label>
+                <input asp-for="CourierAccount" class="form-control" />
+                <span asp-validation-for="CourierAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierAddress" class="control-label"></label>
+                <textarea asp-for="CourierAddress" class="form-control"></textarea>
+                <span asp-validation-for="CourierAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierContactName" class="control-label"></label>
+                <input asp-for="CourierContactName" class="form-control" />
+                <span asp-validation-for="CourierContactName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierPhone" class="control-label"></label>
+                <input asp-for="CourierPhone" class="form-control" />
+                <span asp-validation-for="CourierPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierCellPhone" class="control-label"></label>
+                <input asp-for="CourierCellPhone" class="form-control" />
+                <span asp-validation-for="CourierCellPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierStartDate" class="control-label"></label>
+                <input asp-for="CourierStartDate" class="form-control" />
+                <span asp-validation-for="CourierStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourierRemarks" class="control-label"></label>
+                <textarea asp-for="CourierRemarks" class="form-control"></textarea>
+                <span asp-validation-for="CourierRemarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CiudadID" class="control-label"></label>
+                <select asp-for="CiudadID" class ="form-control" asp-items="ViewBag.CiudadID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

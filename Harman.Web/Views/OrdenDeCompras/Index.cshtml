@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Harman.Web.Data.Entities.OrdenDeCompra>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipmentTermsID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PurchaseOrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoOrdenDeCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Suplidor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModoDePago)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipmentTermsID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseOrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoOrdenDeCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Suplidor.SupplierAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModoDePago.DescripcionModoDePago)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OrdenDeCompraID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OrdenDeCompraID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OrdenDeCompraID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

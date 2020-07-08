@@ -31,5 +31,7 @@ namespace Harman.Web.Data.Entities
 
         public virtual ICollection<ModoDePago> ModoDePago { get; set; }
 
-    }
+        public virtual ICollection<Factura> Facturas { get; set; }
+
+    } 
 }

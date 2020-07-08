@@ -1,0 +1,60 @@
+﻿@model Harman.Web.Data.Entities.Compañia
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Compañia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCompañia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NombreCompañia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionCompañia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionCompañia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionCompañia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DireccionCompañia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoCompañia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoCompañia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyCreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyCreateDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.CityName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CompañiaID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

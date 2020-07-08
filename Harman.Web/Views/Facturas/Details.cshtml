@@ -1,0 +1,36 @@
+﻿@model Harman.Web.Data.Entities.Factura
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Factura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPago)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPago)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Itbis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Itbis.DescripcionItbis)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FacturaID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

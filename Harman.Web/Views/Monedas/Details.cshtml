@@ -1,0 +1,42 @@
+﻿@model Harman.Web.Data.Entities.Moneda
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Moneda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoMoneda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodigoMoneda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreMoneda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NombreMoneda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SimboloDeMoneda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SimboloDeMoneda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pais.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MonedaID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

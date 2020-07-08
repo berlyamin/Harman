@@ -11,7 +11,7 @@ namespace Harman.Web.Data.Entities
         [Key]
         public int SuplidorDeArticuloID { get; set; }
 
-        public int SuplidorrID { get; set; }
+        public int SuplidorID { get; set; }
 
         public int ProductoID { get; set; }
 

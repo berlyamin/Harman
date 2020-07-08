@@ -16,6 +16,7 @@ namespace Harman.Web.Data.Entities
 
         public virtual ICollection<NCF> NCF { get; set; }
 
+       
         public virtual ICollection<Cliente> Clientes { get; set; }
     }
 }

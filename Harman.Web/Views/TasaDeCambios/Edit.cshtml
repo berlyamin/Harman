@@ -1,0 +1,44 @@
+﻿@model Harman.Web.Data.Entities.TasaDeCambio
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>TasaDeCambio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TasaDeCambioID" />
+            <div class="form-group">
+                <label asp-for="FechaCreacionTasaDeCambio" class="control-label"></label>
+                <input asp-for="FechaCreacionTasaDeCambio" class="form-control" />
+                <span asp-validation-for="FechaCreacionTasaDeCambio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExchangeValue" class="control-label"></label>
+                <input asp-for="ExchangeValue" class="form-control" />
+                <span asp-validation-for="ExchangeValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonedaID" class="control-label"></label>
+                <select asp-for="MonedaID" class="form-control" asp-items="ViewBag.MonedaID"></select>
+                <span asp-validation-for="MonedaID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
